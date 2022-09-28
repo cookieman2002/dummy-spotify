@@ -40,16 +40,20 @@ function App() {
       headers: { Authorization: `Bearer ${token}` },
       params: {
         q: searchKey,
-        type: "artist",
+        type: "track",
+        market: "US"
+        
       },
     });
-    setArtists(data.artists.items);
+    console.log(data.tracks.items)
+    setArtists(data.tracks.items);
   };
   const Artistslists = () => {
     return artists.map(artist => (
       <div key={artist.id}>
-        {artist.images.length ? <img src={artist.images[0].url} width={"100px"} alt="" /> : <div>no images</div> }
+        {/* {artist.images.length ? <img src={artist.images[0].url} width={"100px"} alt="" /> : <div>no images</div> } */}
         {artist.name}
+        {}
       </div>
     ))
   };
