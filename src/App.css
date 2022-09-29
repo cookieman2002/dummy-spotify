@@ -1,0 +1,8 @@
+.song{
+    display:flex;
+    align-items: center;
+}
+.names{
+    display: flex;
+    flex-direction: column;
+}
